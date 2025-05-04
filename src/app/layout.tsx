@@ -10,8 +10,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: `Next.js Blog Example with ${CMS_NAME}`,
-  description: `A statically generated blog example using Next.js and ${CMS_NAME}.`,
+  title: `Vida's portfolio`,
+  description: `Hi, I'm Vida — a full stack developer skilled in modern web technologies, backend development, and databases. Explore my projects and resume!. Check out my full-stack developer portfolio - a statically generated blog example using Next.js and ${CMS_NAME}.`,
   openGraph: {
     images: [HOME_OG_IMAGE_URL],
   },
@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link
           rel="apple-touch-icon"
@@ -59,6 +59,7 @@ export default function RootLayout({
       </head>
       <body
         className={cn(inter.className, "dark:bg-slate-900 dark:text-slate-400")}
+        suppressHydrationWarning
       >
         <ThemeSwitcher />
         <div className="min-h-screen">{children}</div>
