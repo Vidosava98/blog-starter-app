@@ -1,5 +1,5 @@
 import Container from "@/app/_components/container";
-import { Hero } from "@/app/_components/Hero";
+import { Hero } from "@/app/_components/hero";
 import { getAllPosts } from "@/lib/api";
 import { Spotlight } from "./_components/ui/Spotlight";
 export default function Index() {
