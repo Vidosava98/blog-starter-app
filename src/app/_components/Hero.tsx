@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Spotlight } from "./ui/Spotlight";
 export function Hero() {
   return (
     <div>
