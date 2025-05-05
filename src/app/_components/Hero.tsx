@@ -1,7 +1,8 @@
 import React from "react";
+import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 export function Hero() {
   return (
-    <div>
+    <div className="relative z-10">
       <header>
         <a id="tab-1" href="#aboutMeId">
           About Me
@@ -27,12 +28,16 @@ export function Hero() {
               src="Resource/Images/vida.jpg"
               alt="My Photo"
             />
-            <p>Hey there, I'm Vida!</p>
-            <p>
-              I'm self-driven full stack developer with strong database
+            <TextGenerateEffect
+              className="lg:text-6xl md:text-5xl sm:text-4xl"
+              words="Hey there, I'm Vida!"
+            />
+            <TextGenerateEffect
+              className="md:tracking-wider mb-6 lg:text-4xl md:text-3xl sm:text-3xl"
+              words=" I'm self-driven full stack developer with strong database
               knowledge and a fast-learning mindset — ready to grow with modern
-              tech stacks.
-            </p>
+              tech stacks."
+            />
             <a href="#projectsId">View my work</a>
           </div>
           <div id="techId">
