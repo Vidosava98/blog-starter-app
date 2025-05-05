@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import cn from "classnames";
 import { ThemeSwitcher } from "./_components/theme-switcher";
-
+import Header from "./_components/header";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -62,6 +62,7 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <ThemeSwitcher />
+        <Header />
         <div className="min-h-screen">{children}</div>
         <Footer />
       </body>
