@@ -3,6 +3,7 @@ import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import MagicButton from "./ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa6";
 import { FloatingNav } from "./ui/FloatingNav";
+import Grid from "./grid";
 export function Hero() {
   return (
     <div className="relative z-10">
@@ -37,6 +38,7 @@ export function Hero() {
               <MagicButton title={"Show my work"} icon={<FaLocationArrow />} />
             </a>
           </div>
+          <Grid />
           <div id="techId">
             <p>Technologies</p>
             <section>
