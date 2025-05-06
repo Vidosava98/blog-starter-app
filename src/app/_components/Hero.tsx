@@ -1,5 +1,7 @@
 import React from "react";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import MagicButton from "./ui/MagicButton";
+import { FaLocationArrow } from "react-icons/fa6";
 export function Hero() {
   return (
     <div className="relative z-10">
@@ -20,7 +22,7 @@ export function Hero() {
           Resume
         </a>
       </header>
-      <div id="content-1">
+      <div id="content-1" className="flex justify-center text-center">
         <div id="aboutMeId">
           <div>
             <img
@@ -38,7 +40,9 @@ export function Hero() {
               knowledge and a fast-learning mindset — ready to grow with modern
               tech stacks."
             />
-            <a href="#projectsId">View my work</a>
+            <a href="#projectsId">
+              <MagicButton title={"Show my work"} icon={<FaLocationArrow />} />
+            </a>
           </div>
           <div id="techId">
             <p>Technologies</p>
