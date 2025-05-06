@@ -4,6 +4,8 @@ import MagicButton from "./ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa6";
 import { FloatingNav } from "./ui/FloatingNav";
 import Grid from "./grid";
+import TitleParagraf from "./titleParagraf";
+import Profile from "./profile";
 export function Hero() {
   return (
     <div className="relative z-10">
@@ -19,11 +21,7 @@ export function Hero() {
       <div id="content-1" className="flex justify-center text-center">
         <div id="aboutMeId">
           <div>
-            <img
-              id="myPictureId"
-              src="Resource/Images/vida.jpg"
-              alt="My Photo"
-            />
+            <Profile src="Resource/Images/vida.jpg" alt="Vidosava Arsic" />
             <TextGenerateEffect
               className="lg:text-6xl md:text-5xl sm:text-4xl"
               words="Hey there, I'm Vida!"
@@ -40,7 +38,7 @@ export function Hero() {
           </div>
           <Grid />
           <div id="techId">
-            <p>Technologies</p>
+            <TitleParagraf title="Technologies" />
             <section>
               <div id="techButtonsId">
                 <button>Languages</button>
@@ -199,7 +197,7 @@ export function Hero() {
             </section>
           </div>
           <div id="projectsId">
-            <p>Projects</p>
+            <TitleParagraf title="Projects" />
             <section>
               <article>
                 <a href="https://github.com/Vidosava98/StartChess">

@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./GradientBg";
-
+import { GlobeDemo } from "./GridGlobe";
 export const BentoGrid = ({
   className,
   children,
@@ -44,7 +44,7 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "relative group/bento shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-xl border border-neutral-200 bg-white p-4 transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none overflow-hidden",
+        "relative group/bento shadow-input row-span-1 flex flex-col justify-between space-y-8 rounded-xl border border-neutral-200 bg-white transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none overflow-hidden",
         className
       )}
       style={{
@@ -68,37 +68,39 @@ export const BentoGridItem = ({
             />
           )}
         </div>
-      </div>
-      <div
-        className={`absolute right-0 -bottom-5 ${
-          id === 5
-        } &&  'w-full opacity-80'`}
-      >
-        {spareImg && (
-          <img
-            src={spareImg}
-            alt={spareImg}
-            className={"object-cover, object-center w-full h-full"}
-          />
-        )}
-      </div>
-      {id === 10 && (
-        <BackgroundGradientAnimation>
-          <div className="absolute z-50 flex items-center justify-center text-white font-bold" />
-        </BackgroundGradientAnimation>
-      )}
-      <div
-        className={cn(
-          titleClassName,
-          "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
-        )}
-      >
-        <div className="font-sans font-extralight text-sm  text-[#c1c2d3] md:text-xs lg:text-base z-10">
-          {description}
+
+        <div
+          className={`absolute right-0 -bottom-5 ${
+            id === 5
+          } &&  'w-full opacity-80'`}
+        >
+          {spareImg && (
+            <img
+              src={spareImg}
+              alt={spareImg}
+              className={"object-cover, object-center w-full h-full"}
+            />
+          )}
         </div>
-        <div className="mt-2 mb-2 font-sans font-bold text-neutral-600 dark:text-neutral-200 text-lg lg:text-3xl max-w-96 z-10">
-          {title}
+        {id === 10 && (
+          <BackgroundGradientAnimation>
+            <div className="absolute z-50 flex items-center justify-center text-white font-bold" />
+          </BackgroundGradientAnimation>
+        )}
+        <div
+          className={cn(
+            titleClassName,
+            "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
+          )}
+        >
+          <div className="font-sans font-extralight text-sm  text-[#c1c2d3] md:text-xs lg:text-base z-20">
+            {description}
+          </div>
+          <div className="mt-2 mb-2 font-sans font-bold text-neutral-600 dark:text-neutral-200 text-lg lg:text-3xl max-w-96 z-20">
+            {title}
+          </div>
         </div>
+        {id == 2 && <GlobeDemo />}
       </div>
     </div>
   );
