@@ -44,7 +44,7 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "relative group/bento shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-xl border border-neutral-200 bg-white p-4 transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none",
+        "relative group/bento shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-xl border border-neutral-200 bg-white p-4 transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none overflow-hidden",
         className
       )}
       style={{
@@ -54,37 +54,39 @@ export const BentoGridItem = ({
       }}
     >
       <div
-        className={`${id === 6} && 'relative flex justify-center items-center'`}
+        className={`${id === 1} && 'relative flex justify-center items-center'`}
       >
         <div className="w-full h-full absolute">
           {img && (
             <img
               src={img}
               alt={img}
-              className={cn(imgClassName, "object-cover", "object-center")}
+              className={cn(
+                imgClassName,
+                "object-cover object-center w-full h-full"
+              )}
             />
           )}
         </div>
-
-        <div
-          className={`absolute right-0 -bottom-5 ${
-            id === 5
-          } &&  'w-full opacity-80'`}
-        >
-          {spareImg && (
-            <img
-              src={spareImg}
-              alt={spareImg}
-              className={"object-cover, object-center w-full h-full"}
-            />
-          )}
-        </div>
-        {id === 6 && (
-          <BackgroundGradientAnimation>
-            <div className="absolute z-50  w-full flex items-center justify-center text-white font-bold" />
-          </BackgroundGradientAnimation>
+      </div>
+      <div
+        className={`absolute right-0 -bottom-5 ${
+          id === 5
+        } &&  'w-full opacity-80'`}
+      >
+        {spareImg && (
+          <img
+            src={spareImg}
+            alt={spareImg}
+            className={"object-cover, object-center w-full h-full"}
+          />
         )}
       </div>
+      {id === 10 && (
+        <BackgroundGradientAnimation>
+          <div className="absolute z-50 flex items-center justify-center text-white font-bold" />
+        </BackgroundGradientAnimation>
+      )}
       <div
         className={cn(
           titleClassName,
