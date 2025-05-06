@@ -2,26 +2,19 @@ import React from "react";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import MagicButton from "./ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa6";
+import { FloatingNav } from "./ui/FloatingNav";
 export function Hero() {
   return (
     <div className="relative z-10">
-      <header>
-        <a id="tab-1" href="#aboutMeId">
-          About Me
-        </a>
-        <a id="tab-2" href="#techId">
-          Technologies
-        </a>
-        <a id="tab-3" href="#projectsId">
-          Projects
-        </a>
-        <a id="tab-4" href="#footerId">
-          Contact
-        </a>
-        <a id="tab-5" href="Resource/Vidosava Arsic CV.pdf">
-          Resume
-        </a>
-      </header>
+      <FloatingNav
+        navItems={[
+          { name: "About Me", link: "#aboutMeId" },
+          { name: "Technologies", link: "#techId" },
+          { name: "Projects", link: "#projectsId" },
+          { name: "Contact", link: "#footerId" },
+          { name: "Resume", link: "Resource/Vidosava Arsic CV.pdf" },
+        ]}
+      />
       <div id="content-1" className="flex justify-center text-center">
         <div id="aboutMeId">
           <div>
