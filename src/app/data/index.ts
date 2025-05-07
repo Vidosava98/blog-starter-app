@@ -63,11 +63,16 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://github.com/adrianhajdin?tab=repositories",
+    title: "StartChess",
+    des: "Web application which represents multiplayer game. Socket.io for real-time communication between players. Express.js for handling and routing HTTP requests",
+    img: "",
+    iconLists: [
+      "/Resource/Images/Icons/Table/nodejs.svg",
+      "/Resource/Images/Icons/Table/javascript.svg",
+      "/Resource/Images/Icons/Table/html.svg",
+      "/Resource/Images/Icons/Table/css3.svg",
+    ],
+    link: "https://github.com/Vidosava98/StartChess",
   },
   {
     id: 2,
