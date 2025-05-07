@@ -110,31 +110,31 @@ export const BentoGridItem = ({
           <div className="mt-2 mb-2 font-sans font-bold text-neutral-600 dark:text-neutral-200 text-lg lg:text-3xl max-w-96 z-20">
             {title}
           </div>
-        </div>
-        {id == 2 && <GlobeDemo />}
-        {id === 5 && (
-          <div className="mt-5 relative">
-            <div className={`absolute -bottom-5 right-0 `}>
-              <Lottie
-                options={{
-                  loop: copied,
-                  autoplay: copied,
-                  animationData,
-                  rendererSettings: {
-                    preserveAspectRatio: "xMidYMid slice",
-                  },
-                }}
+          {id == 2 && <GlobeDemo />}
+          {id === 5 && (
+            <div>
+              <div className={`absolute -bottom-5 right-0 `}>
+                <Lottie
+                  options={{
+                    loop: copied,
+                    autoplay: copied,
+                    animationData,
+                    rendererSettings: {
+                      preserveAspectRatio: "xMidYMid slice",
+                    },
+                  }}
+                />
+              </div>
+              <MagicButton
+                title={copied ? "Email copied!" : "Copy my email"}
+                icon={<IoCopyOutline />}
+                position="left"
+                otherClasses="!bg-[#161a31]"
+                handleClick={handleCopy}
               />
             </div>
-            <MagicButton
-              title={copied ? "Email copied!" : "Copy my email"}
-              icon={<IoCopyOutline />}
-              position="left"
-              otherClasses="!bg-[#161a31]"
-              handleClick={handleCopy}
-            />
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </div>
   );
