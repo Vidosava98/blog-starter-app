@@ -4,7 +4,7 @@ type Props = {
 };
 const TitleParagraf = ({ title }: Props) => {
   return (
-    <div className="text-[1.9rem] max-w-[60%] mb-[3rem] text-center mx-auto my-16 font-bold text-white">
+    <div className="lg:text-4xl md:text-3xl sm:text-3xl max-w-[60%] md:mb-[3rem] sm:mb-[1rem] lg:mb-[5rem] text-center mx-auto font-bold text-white">
       {title}
     </div>
   );

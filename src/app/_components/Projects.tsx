@@ -17,7 +17,7 @@ const Projects = () => {
           >
             <PinContainer title={title} href={link}>
               <div className="relative flex flex-col sm:w-96 w-[80vw] overflow-hidden text-white bg-black-100 border-none border-2 border-opacity-0  lg:h-[45vh] lg:w-[45vh] p-8">
-                <h1 className="flex flex-wrapfont-bold lg:text-2xl md:text-xl text-base line-clamp-1 mb-8 items-center justify-center">
+                <h1 className="flex flex-wrapfont-bold lg:text-3xl md:text-2xl text-base line-clamp-1 mb-8 items-center justify-center">
                   {title}
                 </h1>
                 <p className="lg:text-xl md:text-l text-base line-clamp-2 flex flex-col flex-wrap text-left">
