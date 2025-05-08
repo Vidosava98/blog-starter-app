@@ -7,6 +7,7 @@ import Grid from "./grid";
 import TitleParagraf from "./titleParagraf";
 import Profile from "./profile";
 import Projects from "./Projects";
+import Testimonials from "./Testimonials";
 export function Hero() {
   return (
     <div className="relative z-10">
@@ -39,6 +40,7 @@ export function Hero() {
           </div>
           <Grid />
           <Projects />
+          <Testimonials />
         </div>
       </div>
       <footer id="footerId">

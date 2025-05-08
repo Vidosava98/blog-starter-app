@@ -4,11 +4,11 @@ import { projects } from "@/app/data/index";
 import { PinContainer } from "./ui/3d-pin";
 const Projects = () => {
   return (
-    <div className="py-20">
+    <div className="pt-20">
       <TitleParagraf title="Projects" />
       <div
         id="projectsId"
-        className="flex flex-wrap items-center p-4 md:gap-16 sm:gap-1 lg:gap-24 mt-10 justify-center"
+        className="flex flex-wrap items-center p-4 md:gap-x-16 lg:gap-x-32 md:gap-y-16 lg:gap-y-24 gap-4 mt-10 justify-center"
       >
         {projects.map(({ title, id, des, img, iconLists, link }) => (
           <div
