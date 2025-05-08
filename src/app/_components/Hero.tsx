@@ -17,6 +17,7 @@ export function Hero() {
           { name: "Technologies", link: "#techId" },
           { name: "Projects", link: "#projectsId" },
           { name: "Contact", link: "#footerId" },
+          { name: "Testimonials", link: "#testimonials" },
           { name: "Resume", link: "Resource/Vidosava Arsic CV.pdf" },
         ]}
       />
@@ -43,22 +44,41 @@ export function Hero() {
           <Testimonials />
         </div>
       </div>
-      <footer id="footerId">
-        <div>
+      <footer
+        id="footerId"
+        className="mt-auto flex flex-col justify-center text-center"
+      >
+        <div className="flex flex-row justify-center m-8">
           <a href="mailto:arsic.vida@gmail.com">
-            <img src="Resource/Images/Icons/email.svg" alt="@" />
+            <img
+              src="/gmail.svg"
+              alt="gmail"
+              className="h-[3.81rem] w:[3.81rem] m-4"
+            />
           </a>
           <a href="https://www.linkedin.com/in/vidosava-arsić-7019b9228">
-            <img src="Resource/Images/Icons/in.svg" alt="LinkedIn" />
+            <img
+              src="/linkedin.svg"
+              alt="linkedin"
+              className="h-[3.81rem] w:[3.81rem] m-4"
+            />
           </a>
           <a href="https://github.com/Vidosava98">
-            <img src="Resource/Images/Icons/github.svg" alt="Git" />
+            <img
+              src="/github.svg"
+              alt="Git"
+              className="h-[3.81rem] w:[3.81rem] m-4"
+            />
           </a>
           <a href="https://www.instagram.com/arsic.vida98/">
-            <img src="Resource/Images/Icons/insta.svg" alt="Insta" />
+            <img
+              src="/instagram.svg"
+              alt="Instagram"
+              className="h-[3.81rem] w:[3.81rem]  m-4"
+            />
           </a>
         </div>
-        <p>@2025, Vidosava Arsic.</p>
+        <p className="mb-8">@2025, Vidosava Arsic.</p>
       </footer>
     </div>
   );

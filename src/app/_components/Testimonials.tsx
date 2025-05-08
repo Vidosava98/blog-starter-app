@@ -4,7 +4,7 @@ import { InfiniteMovingCards } from "./ui/InfiniteMovingCards";
 import { testimonials } from "../data";
 function Testimonials() {
   return (
-    <div className="pb-20">
+    <div className="pb-20" id="testimonials">
       <TitleParagraf title="Testimonials" />
       <div className="flex flex-col items-center max-lg:mt-10 text-left">
         <InfiniteMovingCards
