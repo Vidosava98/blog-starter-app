@@ -1,5 +1,5 @@
 import Container from "@/app/_components/container";
-import { Hero } from "@/app/_components/hero";
+import { Hero } from "@/app/_components/Hero";
 import { getAllPosts } from "@/lib/api";
 import { Spotlight } from "./_components/ui/Spotlight";
 import cn from "classnames";
