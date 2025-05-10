@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "prepare": "npm install --legacy-peer-deps",
+    "prepare": "npm install --force",
     "dev": "next dev --turbopack",
     "build": "next build && next-export",
     "start": "next start"
