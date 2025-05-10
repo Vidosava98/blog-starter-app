@@ -9,36 +9,38 @@ function Technologies() {
     showIcons(activeIndex);
 
     function showIcons(columnIndex: number) {
-      let visibleRow: Element | null | undefined = null;
-      const parentDiv = document.getElementById("techcontent");
-      if (parentDiv) {
-        visibleRow = Array.from(parentDiv.children).find((child) => {
-          if (!child?.classList.contains("hidden")) {
-            console.log(child);
-            return child;
-          }
-        });
-      }
-      visibleRow?.classList.add("hidden");
-      const newVisibleRow = parentDiv?.children[activeIndex];
-      newVisibleRow?.classList.remove("hidden");
-      //visibleRow = newVisibleRow;
+      if (typeof document !== "undefined") {
+        let visibleRow: Element | null | undefined = null;
+        const parentDiv = document.getElementById("techcontent");
+        if (parentDiv) {
+          visibleRow = Array.from(parentDiv.children).find((child) => {
+            if (!child?.classList.contains("hidden")) {
+              console.log(child);
+              return child;
+            }
+          });
+        }
+        visibleRow?.classList.add("hidden");
+        const newVisibleRow = parentDiv?.children[activeIndex];
+        newVisibleRow?.classList.remove("hidden");
+        //visibleRow = newVisibleRow;
 
-      let activeButton: Element | null | undefined = null;
-      const parent = document.getElementById("techButtonsId");
-      if (parent) {
-        activeButton = Array.from(parent.children).find((child) => {
-          if (child.classList.contains("font-bold")) {
-            return child;
-          }
-        });
+        let activeButton: Element | null | undefined = null;
+        const parent = document.getElementById("techButtonsId");
+        if (parent) {
+          activeButton = Array.from(parent.children).find((child) => {
+            if (child.classList.contains("font-bold")) {
+              return child;
+            }
+          });
+        }
+        activeButton?.classList.remove("font-bold");
+        activeButton?.classList.remove("underline");
+        const newactiveButton = parent?.children[activeIndex];
+        newactiveButton?.classList.add("font-bold");
+        newactiveButton?.classList.add("underline");
+        //activeButton = newactiveButton;
       }
-      activeButton?.classList.remove("font-bold");
-      activeButton?.classList.remove("underline");
-      const newactiveButton = parent?.children[activeIndex];
-      newactiveButton?.classList.add("font-bold");
-      newactiveButton?.classList.add("underline");
-      //activeButton = newactiveButton;
     }
   }, [activeIndex]);
 
