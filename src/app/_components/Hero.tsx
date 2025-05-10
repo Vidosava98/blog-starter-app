@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import MagicButton from "./ui/MagicButton";
