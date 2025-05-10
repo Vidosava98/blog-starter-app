@@ -1,4 +1,3 @@
-"use client";
 import Container from "@/app/_components/container";
 import { Hero } from "@/app/_components/Hero";
 import { getAllPosts } from "@/lib/api";
