@@ -1,284 +1,124 @@
 "use client";
-import React from "react";
-import TitleParagraf from "../titleParagraf";
-import { useEffect, useState } from "react";
-function Technologies() {
+import React, { useEffect, useRef, useState, useCallback } from "react";
+
+const Technologies = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  useEffect(() => {
-    console.log("Effect");
-    showIcons(activeIndex);
+  const contentRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-    function showIcons(columnIndex: number) {
-      if (typeof document !== "undefined") {
-        let visibleRow: Element | null | undefined = null;
-        const parentDiv = document.getElementById("techcontent");
-        if (parentDiv) {
-          visibleRow = Array.from(parentDiv.children).find((child) => {
-            if (!child?.classList.contains("hidden")) {
-              console.log(child);
-              return child;
-            }
-          });
-        }
-        visibleRow?.classList.add("hidden");
-        const newVisibleRow = parentDiv?.children[activeIndex];
-        newVisibleRow?.classList.remove("hidden");
-        //visibleRow = newVisibleRow;
-
-        let activeButton: Element | null | undefined = null;
-        const parent = document.getElementById("techButtonsId");
-        if (parent) {
-          activeButton = Array.from(parent.children).find((child) => {
-            if (child.classList.contains("font-bold")) {
-              return child;
-            }
-          });
-        }
-        activeButton?.classList.remove("font-bold");
-        activeButton?.classList.remove("underline");
-        const newactiveButton = parent?.children[activeIndex];
-        newactiveButton?.classList.add("font-bold");
-        newactiveButton?.classList.add("underline");
-        //activeButton = newactiveButton;
-      }
+  const setRef = useCallback((el: HTMLDivElement | null, index: number) => {
+    if (el) {
+      contentRefs.current[index] = el;
     }
+  }, []);
+
+  useEffect(() => {
+    // Sakrij sve prethodne elemente
+    contentRefs.current.forEach((ref, index) => {
+      if (ref) {
+        if (index === activeIndex) {
+          ref.classList.remove("hidden");
+        } else {
+          ref.classList.add("hidden");
+        }
+      }
+    });
   }, [activeIndex]);
+
+  const techGroups = [
+    [
+      { name: "C#", imgSrc: "Resource/Images/Icons/Table/csharp.svg" },
+      { name: "C", imgSrc: "Resource/Images/Icons/Table/C.svg" },
+      { name: "Java", imgSrc: "Resource/Images/Icons/Table/java.svg" },
+      {
+        name: "JavaScript",
+        imgSrc: "Resource/Images/Icons/Table/javascript.svg",
+      },
+      { name: "Python", imgSrc: "Resource/Images/Icons/Table/python.svg" },
+    ],
+    [
+      { name: ".NET", imgSrc: "Resource/Images/Icons/Table/dotnet.svg" },
+      { name: "Node.js", imgSrc: "Resource/Images/Icons/Table/nodejs.svg" },
+    ],
+    [
+      { name: "React", imgSrc: "Resource/Images/Icons/Table/react.svg" },
+      { name: "HTML", imgSrc: "Resource/Images/Icons/Table/html.svg" },
+      { name: "CSS", imgSrc: "Resource/Images/Icons/Table/css3.svg" },
+    ],
+    [
+      { name: "SQL", imgSrc: "Resource/Images/Icons/Table/sql.svg" },
+      { name: "MongoDB", imgSrc: "Resource/Images/Icons/Table/mongodb.svg" },
+      { name: "TiDB", imgSrc: "Resource/Images/Icons/Table/tidb.svg" },
+      {
+        name: "Cassandra",
+        imgSrc: "Resource/Images/Icons/Table/cassandra.svg",
+      },
+      { name: "Neo4j", imgSrc: "Resource/Images/Icons/Table/neo4j.svg" },
+    ],
+    [
+      { name: "Docker", imgSrc: "Resource/Images/Icons/Table/docker.svg" },
+      { name: "Swagger", imgSrc: "Resource/Images/Icons/Table/swagger.svg" },
+      { name: "GitHub", imgSrc: "Resource/Images/Icons/Table/github.svg" },
+      {
+        name: "Bitbucket",
+        imgSrc: "Resource/Images/Icons/Table/bitbucket.svg",
+      },
+      {
+        name: "Mosquitto",
+        imgSrc: "Resource/Images/Icons/Table/mosquitto.svg",
+      },
+      { name: "Kafka", imgSrc: "Resource/Images/Icons/Table/Kafka.svg" },
+      { name: "Flink", imgSrc: "Resource/Images/Icons/Table/flink.svg" },
+      { name: "Figma", imgSrc: "Resource/Images/Icons/Table/figma.svg" },
+    ],
+  ];
 
   return (
     <div id="techId" className="flex flex-col text-center justify-center">
-      <TitleParagraf title="Technologies" />
-      <section className="flex flex-col gap-4 justify-center text-center w-96  lg:w-1/2 mx-auto">
+      <h2>Technologies</h2>
+      <section className="flex flex-col gap-4 justify-center text-center w-96 lg:w-1/2 mx-auto">
         <div id="techButtonsId" className="flex flex-wrap">
-          <button
-            onClick={() => setActiveIndex(0)}
-            className=" text-emerald-100 font-bold underline bg-black-100 border-none text-lg p-4 cursor-pointer"
-          >
-            Languages
-          </button>
-          <button
-            onClick={() => setActiveIndex(1)}
-            className=" text-white bg-black-100 border-none text-lg p-4 cursor-pointer"
-          >
-            BackEnd
-          </button>
-          <button
-            onClick={() => setActiveIndex(2)}
-            className=" text-white bg-black-100 border-none text-lg p-4 cursor-pointer"
-          >
-            FrontEnd
-          </button>
-          <button
-            onClick={() => setActiveIndex(3)}
-            className=" text-white bg-black-100 border-none text-lg p-4 cursor-pointer"
-          >
-            Databases
-          </button>
-          <button
-            onClick={() => setActiveIndex(4)}
-            className=" text-white bg-black-100 border-none text-lg p-4 cursor-pointer"
-          >
-            Other
-          </button>
+          {["Languages", "BackEnd", "FrontEnd", "Databases", "Other"].map(
+            (label, index) => (
+              <button
+                key={index}
+                onClick={() => setActiveIndex(index)}
+                className={`${
+                  activeIndex === index ? "font-bold underline" : ""
+                } text-white bg-black-100 border-none text-lg p-4 cursor-pointer`}
+              >
+                {label}
+              </button>
+            )
+          )}
         </div>
         <div id="techcontent" className="flex flex-wrap">
-          <div className="flex flex-row flex-wrap gap-4 bg-opacity-100 relative transition-transform duration-300 ease-in-out justify-center">
-            <div className="flex flex-row text-center justify-center gap-2 border-slate-200 p-4 rounded-2xl ">
-              <img
-                src="Resource/Images/Icons/Table/csharp.svg"
-                alt="C#"
-                className="border border-white/[0.2] bg-white-200 rounded-full lg:w-12 lg:h-12 w-10 h-10 flex justify-center items-center overflow-hidden"
-              />
-              <p className="mt-2.5">C#</p>
+          {techGroups.map((group, groupIndex) => (
+            <div
+              key={groupIndex}
+              ref={(el) => setRef(el, groupIndex)} // Koristimo callback ref
+              className={`flex flex-row flex-wrap gap-4 bg-opacity-100 relative transition-transform duration-300 ease-in-out justify-center ${
+                groupIndex !== activeIndex ? "hidden" : ""
+              }`}
+            >
+              {group.map((tech, techIndex) => (
+                <div
+                  key={techIndex}
+                  className="flex flex-row text-center justify-center gap-2 border-slate-200 p-4 rounded-2xl"
+                >
+                  <img
+                    src={tech.imgSrc}
+                    alt={tech.name}
+                    className="border border-white/[0.2] bg-white-200 rounded-full lg:w-12 lg:h-12 w-10 h-10 flex justify-center items-center overflow-hidden"
+                  />
+                  <p className="mt-2.5">{tech.name}</p>
+                </div>
+              ))}
             </div>
-            <div className="flex flex-row text-center justify-center gap-2 border-slate-200 p-4 rounded-2xl ">
-              <img
-                src="Resource/Images/Icons/Table/C.svg"
-                alt="C"
-                className="border border-white/[0.2] bg-white-200 rounded-full lg:w-12 lg:h-12 w-10 h-10 flex justify-center items-center overflow-hidden"
-              />
-              <p className="mt-2.5">C</p>
-            </div>
-            <div className="flex flex-row text-center justify-center gap-2 border-slate-200 p-4 rounded-2xl ">
-              <img
-                src="Resource/Images/Icons/Table/java.svg"
-                alt="java"
-                className="border border-white/[0.2]  bg-white-200 rounded-full lg:w-12 lg:h-12 w-10 h-10 flex justify-center items-center overflow-hidden"
-              />
-              <p className="mt-2.5">Java</p>
-            </div>
-            <div className="flex flex-row text-center justify-center gap-2 border-slate-200 p-4 rounded-2xl ">
-              <img
-                src="Resource/Images/Icons/Table/javascript.svg"
-                alt="javascript"
-                className="border border-white/[0.2]  bg-white-200 rounded-full lg:w-12 lg:h-12 w-10 h-10 flex justify-center items-center overflow-hidden"
-              />
-              <p className="mt-2.5">JavaScript</p>
-            </div>
-            <div className="flex flex-row text-center justify-center gap-2 border-slate-200 p-4 rounded-2xl ">
-              <img
-                src="Resource/Images/Icons/Table/python.svg"
-                alt="python"
-                className="border border-white/[0.2] bg-white-200 rounded-full lg:w-12 lg:h-12 w-10 h-10 flex justify-center items-center overflow-hidden"
-              />
-              <p className="mt-2.5">Python</p>
-            </div>
-          </div>
-          <div className="flex hidden flex-row flex-wrap gap-4 bg-opacity-100 relative transition-transform duration-300 ease-in-out justify-center">
-            <div className="flex flex-row text-center justify-center gap-2 border-slate-200 p-4 rounded-2xl ">
-              <img
-                src="Resource/Images/Icons/Table/dotnet.svg"
-                alt="dotnet"
-                className="border border-white/[0.2] bg-white-200 rounded-full lg:w-12 lg:h-12 w-10 h-10 flex justify-center items-center overflow-hidden"
-              />
-              <p className="mt-2.5">.NET</p>
-            </div>
-            <div className="flex flex-row text-center justify-center gap-2 border-slate-200 p-4 rounded-2xl ">
-              <img
-                src="Resource/Images/Icons/Table/nodejs.svg"
-                alt="nodejs"
-                className="border border-white/[0.2] bg-white-200 rounded-full lg:w-12 lg:h-12 w-10 h-10 flex justify-center items-center overflow-hidden"
-              />
-              <p className="mt-2.5">Node.js</p>
-            </div>
-          </div>
-          <div className="flex hidden flex-row flex-wrap gap-4 bg-opacity-100 relative transition-transform duration-300 ease-in-out justify-center">
-            <div className="flex flex-row text-center justify-center gap-2 border-slate-200 p-4 rounded-2xl ">
-              <img
-                src="Resource/Images/Icons/Table/react.svg"
-                alt="react"
-                className="border border-white/[0.2] bg-white-200 rounded-full lg:w-12 lg:h-12 w-10 h-10 flex justify-center items-center overflow-hidden"
-              />
-              <p className="mt-2.5">React</p>
-            </div>
-            <div className="flex flex-row text-center justify-center gap-2 border-slate-200 p-4 rounded-2xl ">
-              <img
-                src="Resource/Images/Icons/Table/html.svg"
-                alt="html"
-                className="border border-white/[0.2] bg-white-200 rounded-full lg:w-12 lg:h-12 w-10 h-10 flex justify-center items-center overflow-hidden"
-              />
-              <p className="mt-2.5">HTML</p>
-            </div>
-            <div className="flex flex-row text-center justify-center gap-2 border-slate-200 p-4 rounded-2xl ">
-              <img
-                src="Resource/Images/Icons/Table/css3.svg"
-                alt="css"
-                className="border border-white/[0.2] bg-white-200 rounded-full lg:w-12 lg:h-12 w-10 h-10 flex justify-center items-center overflow-hidden"
-              />
-              <p className="mt-2.5">CSS</p>
-            </div>
-          </div>
-          <div className="flex hidden flex-row flex-wrap gap-4 bg-opacity-100 relative transition-transform duration-300 ease-in-out justify-center">
-            <div className="flex flex-row text-center justify-center gap-2 border-slate-200 p-4 rounded-2xl ">
-              <img
-                src="Resource/Images/Icons/Table/sql.svg"
-                alt="sql"
-                className="border border-white/[0.2] bg-white-200 rounded-full lg:w-12 lg:h-12 w-10 h-10 flex justify-center items-center overflow-hidden"
-              />
-              <p className="mt-2.5">SQL</p>
-            </div>
-            <div className="flex flex-row text-center justify-center gap-2 border-slate-200 p-4 rounded-2xl ">
-              <img
-                src="Resource/Images/Icons/Table/mongodb.svg"
-                alt="mongodb"
-                className="border border-white/[0.2] bg-white-200 rounded-full lg:w-12 lg:h-12 w-10 h-10 flex justify-center items-center overflow-hidden"
-              />
-              <p className="mt-2.5">MongoDB</p>
-            </div>
-            <div className="flex flex-row text-center justify-center gap-2 border-slate-200 p-4 rounded-2xl ">
-              <img
-                src="Resource/Images/Icons/Table/tidb.svg"
-                alt="tidb"
-                className="border border-white/[0.2] bg-white-200 rounded-full lg:w-12 lg:h-12 w-10 h-10 flex justify-center items-center overflow-hidden"
-              />
-              <p className="mt-2.5">TiDB</p>
-            </div>
-            <div className="flex flex-row text-center justify-center gap-2 border-slate-200 p-4 rounded-2xl ">
-              <img
-                src="Resource/Images/Icons/Table/cassandra.svg"
-                alt="cassandra"
-                className="border border-white/[0.2] bg-white-200 rounded-full lg:w-12 lg:h-12 w-10 h-10 flex justify-center items-center overflow-hidden"
-              />
-              <p className="mt-2.5">Cassandra</p>
-            </div>
-            <div className="flex flex-row text-center justify-center gap-2 border-slate-200 p-4 rounded-2xl ">
-              <img
-                src="Resource/Images/Icons/Table/neo4j.svg"
-                alt="neo4j"
-                className="border border-white/[0.2] bg-white-200 rounded-full lg:w-12 lg:h-12 w-10 h-10 flex justify-center items-center overflow-hidden"
-              />
-              <p className="mt-2.5">Neo4j</p>
-            </div>
-          </div>
-          <div className="flex hidden flex-row flex-wrap gap-4 bg-opacity-100 relative transition-transform duration-300 ease-in-out justify-center">
-            <div className="flex flex-row text-center justify-center gap-2 border-slate-200 p-4 rounded-2xl ">
-              <img
-                src="Resource/Images/Icons/Table/docker.svg"
-                alt="docker"
-                className="border border-white/[0.2] bg-white-200 rounded-full lg:w-12 lg:h-12 w-10 h-10 flex justify-center items-center overflow-hidden"
-              />
-              <p className="mt-2.5">Docker</p>
-            </div>
-            <div className="flex flex-row text-center justify-center gap-2 border-slate-200 p-4 rounded-2xl ">
-              <img
-                src="Resource/Images/Icons/Table/swagger.svg"
-                alt="swagger"
-                className="border border-white/[0.2] bg-white-200 rounded-full lg:w-12 lg:h-12 w-10 h-10 flex justify-center items-center overflow-hidden"
-              />
-              <p className="mt-2.5">Swagger</p>
-            </div>
-            <div className="flex flex-row text-center justify-center gap-2 border-slate-200 p-4 rounded-2xl ">
-              <img
-                src="Resource/Images/Icons/Table/github.svg"
-                alt="github"
-                className="border border-white/[0.2] bg-white-200 rounded-full lg:w-12 lg:h-12 w-10 h-10 flex justify-center items-center overflow-hidden"
-              />
-              <p className="mt-2.5">GitHub</p>
-            </div>
-            <div className="flex flex-row text-center justify-center gap-2 border-slate-200 p-4 rounded-2xl ">
-              <img
-                src="Resource/Images/Icons/Table/bitbucket.svg"
-                alt="bitbucket"
-                className="border border-white/[0.2] bg-white-200 rounded-full lg:w-12 lg:h-12 w-10 h-10 flex justify-center items-center overflow-hidden"
-              />
-              <p className="mt-2.5">Bitbucket</p>
-            </div>
-            <div className="flex flex-row text-center justify-center gap-2 border-slate-200 p-4 rounded-2xl ">
-              <img
-                src="Resource/Images/Icons/Table/mosquitto.svg"
-                alt="mosquitto"
-                className="border border-white/[0.2] bg-white-200 rounded-full lg:w-12 lg:h-12 w-10 h-10 flex justify-center items-center overflow-hidden"
-              />
-              <p className="mt-2.5">Mosquitto</p>
-            </div>
-            <div className="flex flex-row text-center justify-center gap-2 border-slate-200 p-4 rounded-2xl ">
-              <img
-                src="Resource/Images/Icons/Table/Kafka.svg"
-                alt="kafka"
-                className="border border-white/[0.2] bg-white-200 rounded-full lg:w-12 lg:h-12 w-10 h-10 flex justify-center items-center overflow-hidden"
-              />
-              <p className="mt-2.5">Kafka</p>
-            </div>
-            <div className="flex flex-row text-center justify-center gap-2 border-slate-200 p-4 rounded-2xl ">
-              <img
-                src="Resource/Images/Icons/Table/flink.svg"
-                alt="Flink"
-                className="border border-white/[0.2] bg-white-200 rounded-full lg:w-12 lg:h-12 w-10 h-10 flex justify-center items-center overflow-hidden"
-              />
-              <p className="mt-2.5">Flink</p>
-            </div>
-            <div className="flex flex-row text-center justify-center gap-2 border-slate-200 p-4 rounded-2xl ">
-              <img
-                src="Resource/Images/Icons/Table/figma.svg"
-                alt="Figma"
-                className="border border-white/[0.2] bg-white-200 rounded-full lg:w-12 lg:h-12 w-10 h-10 flex justify-center items-center overflow-hidden"
-              />
-              <p className="mt-2.5">Figma</p>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
     </div>
   );
-}
+};
 
 export default Technologies;
