@@ -8,6 +8,7 @@ import TitleParagraf from "./titleParagraf";
 import Profile from "./profile";
 import Projects from "./Projects";
 import Testimonials from "./Testimonials";
+import Technologies from "./ui/Technologies";
 export function Hero() {
   return (
     <div className="relative z-10">
@@ -40,6 +41,7 @@ export function Hero() {
             </a>
           </div>
           <Grid />
+          <Technologies />
           <Projects />
           <Testimonials />
         </div>

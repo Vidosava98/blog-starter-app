@@ -103,7 +103,7 @@ export const projects = [
   {
     id: 4,
     title: "Graduation topic",
-    des: "Technologies for implementation of a real-time Data Warehouse.",
+    des: "Technologies for implementation of a real-time Data Warehouse. ",
     img: "",
     iconLists: [
       "netcore.svg",
