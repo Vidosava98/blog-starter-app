@@ -3,7 +3,6 @@ type Props = {
 };
 
 const Container = ({ children }: Props) => {
-  console.log(children);
   return <div className="container mx-auto">{children}</div>;
 };
 
