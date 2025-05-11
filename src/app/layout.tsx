@@ -2,7 +2,7 @@ import Footer from "@/app/_components/footer";
 import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import cn from "classnames";
-import { ThemeSwitcher } from "./_components/theme-switcher";
+//import { ThemeSwitcher } from "./_components/theme-switcher";
 import Header from "./_components/header";
 import "./globals.css";
 
@@ -60,7 +60,7 @@ export default function RootLayout({
         className={cn("dark:bg-slate-900 dark:text-slate-400")}
         suppressHydrationWarning
       >
-        <ThemeSwitcher />
+        {/* <ThemeSwitcher /> */}
         <Header />
         <div className="min-h-screen">{children}</div>
         <Footer />
