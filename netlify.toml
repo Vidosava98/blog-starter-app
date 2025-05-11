@@ -4,6 +4,3 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
-
-[build.environment]
-GO_VERSION = "none"
