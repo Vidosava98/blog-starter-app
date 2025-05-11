@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import TitleParagraf from "./titleParagraf";
 import { projects } from "@/app/data/index";

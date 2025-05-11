@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import TitleParagraf from "./titleParagraf";
 import { InfiniteMovingCards } from "./ui/InfiniteMovingCards";
