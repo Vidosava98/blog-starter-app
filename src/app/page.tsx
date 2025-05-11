@@ -1,15 +1,9 @@
+"use client";
 import Container from "@/app/_components/container";
 import { Hero } from "@/app/_components/Hero";
-import { getAllPosts } from "@/lib/api";
 import { Spotlight } from "./_components/ui/Spotlight";
 import cn from "classnames";
 export default function Index() {
-  const allPosts = getAllPosts();
-
-  const heroPost = allPosts[0];
-
-  const morePosts = allPosts.slice(1);
-
   return (
     <main className="relative bg-black-100 flex justify-end items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
       <div className="max-w-7xl w-full">
