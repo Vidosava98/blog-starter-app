@@ -7,6 +7,7 @@ import { useState } from "react";
 import animationData from "@/app/data/confetti.json";
 import MagicButton from "./MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
+import LottieAnimation from "./LottieAnimation";
 export const BentoGrid = ({
   className,
   children,
@@ -114,7 +115,8 @@ export const BentoGridItem = ({
           {id === 5 && (
             <div>
               <div className={`absolute -bottom-5 right-0 `}>
-                <Lottie
+                <LottieAnimation copied={copied} />
+                {/* <Lottie
                   options={{
                     loop: copied,
                     autoplay: copied,
@@ -123,7 +125,7 @@ export const BentoGridItem = ({
                       preserveAspectRatio: "xMidYMid slice",
                     },
                   }}
-                />
+                /> */}
               </div>
               <MagicButton
                 title={copied ? "Email copied!" : "Copy my email"}

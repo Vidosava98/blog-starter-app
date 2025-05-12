@@ -5,6 +5,7 @@ import cn from "classnames";
 //import { ThemeSwitcher } from "./_components/theme-switcher";
 import Header from "@/app/_components/header";
 import "@/app/globals.css";
+import ThemeProvider from "./_components/ThemeProvider";
 
 //const inter = Inter({ subsets: ["latin"] });
 
@@ -59,7 +60,10 @@ export default function RootLayout({
       <body className={cn("bg-slate-900 text-slate-400")}>
         {/* <ThemeSwitcher /> */}
         <Header />
-        <div className="min-h-screen">{children}</div>
+        <div className="min-h-screen">
+          {/* <ThemeProvider>{children}</ThemeProvider> TODO: otkomentariši kada/ako budeš htela da se zezaš sa dark mode. Ignoriši dok ne popraviš build: :) */}
+          {children}
+        </div>
         <Footer />
       </body>
     </html>
