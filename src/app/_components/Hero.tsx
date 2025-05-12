@@ -27,11 +27,11 @@ export function Hero() {
           <div>
             <Profile src="Resource/Images/vida.jpg" alt="Vidosava Arsic" />
             <TextGenerateEffect
-              className="lg:text-6xl md:text-5xl sm:text-4xl"
+              className="lg:text-6xl md:text-5xl text-4xl"
               words="Hey there, I'm Vida!"
             />
             <TextGenerateEffect
-              className="md:tracking-wider mb-6 lg:text-4xl md:text-3xl sm:text-3xl"
+              className="flex md:tracking-wider mb-6 lg:text-4xl md:text-3xl text-3xl w-96 lg:w-fit md:w-fit mx-auto"
               words=" I'm self-driven full stack developer with strong database
               knowledge and a fast-learning mindset — ready to grow with modern
               tech stacks."

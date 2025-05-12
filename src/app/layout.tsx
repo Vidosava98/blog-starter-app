@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <head>
         <link
           rel="apple-touch-icon"
@@ -56,10 +56,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#000" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
-      <body
-        className={cn("dark:bg-slate-900 dark:text-slate-400")}
-        suppressHydrationWarning
-      >
+      <body className={cn("bg-slate-900 text-slate-400")}>
         {/* <ThemeSwitcher /> */}
         <Header />
         <div className="min-h-screen">{children}</div>
