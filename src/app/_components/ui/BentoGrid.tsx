@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 //import { BackgroundGradientAnimation } from "./GradientBg";
-import { GlobeDemo } from "./GridGlobe";
+// import { GlobeDemo } from "./GridGlobe";
 import { useState } from "react";
 import animationData from "@/app/data/confetti.json";
 import MagicButton from "./MagicButton";
@@ -110,7 +110,7 @@ export const BentoGridItem = ({
           <div className="mt-2 mb-2 font-sans font-bold text-neutral-600 dark:text-neutral-200 text-lg lg:text-3xl max-w-96 z-20">
             {title}
           </div>
-          {id == 2 && <GlobeDemo />}
+          {/* {id == 2 && <GlobeDemo />} */}
           {id === 5 && (
             <div>
               <div className={`absolute -bottom-5 right-0 `}>
