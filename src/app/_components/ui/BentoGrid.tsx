@@ -1,9 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
-//import { BackgroundGradientAnimation } from "./GradientBg";
-// import { GlobeDemo } from "./GridGlobe";
 import { useState } from "react";
-import animationData from "@/app/data/confetti.json";
 import MagicButton from "./MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
 import LottieAnimation from "./LottieAnimation";
@@ -93,11 +90,6 @@ export const BentoGridItem = ({
             />
           )}
         </div>
-        {/* {id === 10 && (
-          <BackgroundGradientAnimation>
-            {}
-          </BackgroundGradientAnimation>
-        )} */}
         <div
           className={cn(
             titleClassName,
@@ -115,16 +107,6 @@ export const BentoGridItem = ({
             <div>
               <div className={`absolute -bottom-5 right-0 `}>
                 <LottieAnimation copied={copied} />
-                {/* <Lottie
-                  options={{
-                    loop: copied,
-                    autoplay: copied,
-                    animationData,
-                    rendererSettings: {
-                      preserveAspectRatio: "xMidYMid slice",
-                    },
-                  }}
-                /> */}
               </div>
               <MagicButton
                 title={copied ? "Email copied!" : "Copy my email"}
