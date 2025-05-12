@@ -1,7 +1,7 @@
 "use client";
 import Container from "@/app/_components/container";
 import { Hero } from "@/app/_components/Hero";
-import { Spotlight } from "./_components/ui/Spotlight";
+import { Spotlight } from "@/app/_components/ui/Spotlight";
 import cn from "classnames";
 export default function Index() {
   return (

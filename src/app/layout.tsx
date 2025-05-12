@@ -3,8 +3,8 @@ import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import cn from "classnames";
 //import { ThemeSwitcher } from "./_components/theme-switcher";
-import Header from "./_components/header";
-import "./globals.css";
+import Header from "@/app/_components/header";
+import "@/app/globals.css";
 
 //const inter = Inter({ subsets: ["latin"] });
 
