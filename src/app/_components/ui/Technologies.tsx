@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState, useCallback } from "react";
-
+import TitleParagraf from "../titleParagraf";
 const Technologies = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const contentRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -73,9 +73,12 @@ const Technologies = () => {
   ];
 
   return (
-    <div id="techId" className="flex flex-col text-center justify-center">
-      <h2>Technologies</h2>
-      <section className="flex flex-col gap-4 justify-center text-center w-96 lg:w-1/2 mx-auto">
+    <div
+      id="techId"
+      className="flex flex-col items-center justify-center mt-20 w-96 lg:w-full mx-auto"
+    >
+      <TitleParagraf title="Technologies" />
+      <section className="flex flex-col justify-center text-center mt-5 gap-16  items-center">
         <div id="techButtonsId" className="flex flex-wrap">
           {["Languages", "BackEnd", "FrontEnd", "Databases", "Other"].map(
             (label, index) => (
@@ -91,7 +94,7 @@ const Technologies = () => {
             )
           )}
         </div>
-        <div id="techcontent" className="flex flex-wrap">
+        <div id="techcontent" className="flex flex-wrap lg:px-36 ">
           {techGroups.map((group, groupIndex) => (
             <div
               key={groupIndex}
@@ -103,14 +106,14 @@ const Technologies = () => {
               {group.map((tech, techIndex) => (
                 <div
                   key={techIndex}
-                  className="flex flex-row text-center justify-center gap-2 border-slate-200 p-4 rounded-2xl"
+                  className="flex flex-col text-center justify-center gap-2 border-slate-200 p-4 rounded-2xl"
                 >
                   <img
                     src={tech.imgSrc}
                     alt={tech.name}
                     className="border border-white/[0.2] bg-white-200 rounded-full lg:w-12 lg:h-12 w-10 h-10 flex justify-center items-center overflow-hidden"
                   />
-                  <p className="mt-2.5">{tech.name}</p>
+                  <p className="mt-2.5 font-bold">{tech.name}</p>
                 </div>
               ))}
             </div>

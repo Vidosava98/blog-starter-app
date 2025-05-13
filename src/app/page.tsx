@@ -22,11 +22,12 @@ export default function Index() {
               className={cn(
                 "absolute inset-0",
                 "[background-size:100px_100px]",
-                "[background-image:linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)]",
-                "dark:[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]"
+                "light:[background-image:linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)]",
+                "dark:[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]",
+                "[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]"
               )}
             />
-            <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black-100"></div>
+            <div className="pointer-events-none absolute inset-0 flex items-center justify-center light:bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] bg-black-100 dark:bg-black-100"></div>
           </div>
           <Hero />
         </Container>
