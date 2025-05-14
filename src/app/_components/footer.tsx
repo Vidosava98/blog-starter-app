@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="bg-neutral-50 border-t border-neutral-200 dark:bg-slate-800">
       <Container>
         <div className="py-8 flex flex-col lg:flex-row items-center">
-          <h3 className="text-3xl lg:text-[2.5rem] font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2">
+          <h3 className="text-3xl lg:text-[2.5rem] font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2 text-black-100">
             Built with React and Next.js.
           </h3>
           <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
@@ -48,7 +48,9 @@ export function Footer() {
             </footer>
           </div>
         </div>
-        <p className="font-bold text-center pb-4">@2025, Vidosava Arsic.</p>
+        <p className="font-bold text-center text-black-100 pb-4">
+          @2025, Vidosava Arsic.
+        </p>
       </Container>
     </footer>
   );
