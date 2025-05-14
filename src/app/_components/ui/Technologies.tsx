@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import TitleParagraf from "../titleParagraf";
 const Technologies = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(2);
   const contentRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const setRef = useCallback((el: HTMLDivElement | null, index: number) => {
@@ -27,13 +27,13 @@ const Technologies = () => {
   const techGroups = [
     [
       { name: "C#", imgSrc: "Resource/Images/Icons/Table/csharp.svg" },
-      { name: "C", imgSrc: "Resource/Images/Icons/Table/C.svg" },
-      { name: "Java", imgSrc: "Resource/Images/Icons/Table/java.svg" },
       {
         name: "JavaScript",
         imgSrc: "Resource/Images/Icons/Table/javascript.svg",
       },
       { name: "Python", imgSrc: "Resource/Images/Icons/Table/python.svg" },
+      { name: "C", imgSrc: "Resource/Images/Icons/Table/C.svg" },
+      { name: "Java", imgSrc: "Resource/Images/Icons/Table/java.svg" },
     ],
     [
       { name: ".NET", imgSrc: "Resource/Images/Icons/Table/dotnet.svg" },
@@ -79,7 +79,10 @@ const Technologies = () => {
     >
       <TitleParagraf title="Technologies" />
       <section className="flex flex-col justify-center text-center mt-5 gap-16  items-center">
-        <div id="techButtonsId" className="flex flex-wrap">
+        <div
+          id="techButtonsId"
+          className="flex flex-wrap w-96 lg:w-full justify-center"
+        >
           {["Languages", "BackEnd", "FrontEnd", "Databases", "Other"].map(
             (label, index) => (
               <button
@@ -87,7 +90,7 @@ const Technologies = () => {
                 onClick={() => setActiveIndex(index)}
                 className={`${
                   activeIndex === index ? "font-bold underline" : ""
-                } text-white bg-black-100 border-none text-lg p-4 cursor-pointer`}
+                } text-white border-none text-lg px-4 cursor-pointer hover:font-bold`}
               >
                 {label}
               </button>
@@ -106,12 +109,12 @@ const Technologies = () => {
               {group.map((tech, techIndex) => (
                 <div
                   key={techIndex}
-                  className="flex flex-col text-center justify-center gap-2 border-slate-200 p-4 rounded-2xl"
+                  className="flex flex-col text-center justify-center items-center gap-2 border-slate-200 p-4 rounded-2xl"
                 >
                   <img
                     src={tech.imgSrc}
                     alt={tech.name}
-                    className="border border-white/[0.2] bg-white-200 rounded-full lg:w-12 lg:h-12 w-10 h-10 flex justify-center items-center overflow-hidden"
+                    className="border border-white/[0.2] bg-white-200 rounded-full lg:w-12 lg:h-12 w-10 h-10 flex overflow-hidden"
                   />
                   <p className="mt-2.5 font-bold">{tech.name}</p>
                 </div>

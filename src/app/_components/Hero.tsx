@@ -17,8 +17,8 @@ export function Hero() {
           { name: "About Me", link: "#aboutMeId" },
           { name: "Technologies", link: "#techId" },
           { name: "Projects", link: "#projectsId" },
-          { name: "Contact", link: "#footerId" },
           { name: "Testimonials", link: "#testimonials" },
+          { name: "Contact", link: "#footerId" },
           { name: "Resume", link: "Resource/Vidosava Arsic CV.pdf" },
         ]}
       />
@@ -31,7 +31,7 @@ export function Hero() {
               words="Hey there, I'm Vida!"
             />
             <TextGenerateEffect
-              className="flex md:tracking-wider mb-6 lg:text-4xl md:text-3xl text-3xl w-96 lg:w-fit md:w-fit mx-auto"
+              className="flex md:tracking-wider mb-6 lg:text-4xl md:text-3xl text-3xl w-96 lg:w-fit md:w-fit mx-auto px-4"
               words=" I'm self-driven full stack developer with strong database
               knowledge and a fast-learning mindset — ready to grow with modern
               tech stacks."
@@ -46,42 +46,6 @@ export function Hero() {
           <Testimonials />
         </div>
       </div>
-      <footer
-        id="footerId"
-        className="mt-auto flex flex-col justify-center text-center"
-      >
-        <div className="flex flex-row justify-center m-8">
-          <a href="mailto:arsic.vida@gmail.com">
-            <img
-              src="/gmail.svg"
-              alt="gmail"
-              className="h-[3.81rem] w:[3.81rem] m-4"
-            />
-          </a>
-          <a href="https://www.linkedin.com/in/vidosava-arsić-7019b9228">
-            <img
-              src="/linkedin.svg"
-              alt="linkedin"
-              className="h-[3.81rem] w:[3.81rem] m-4"
-            />
-          </a>
-          <a href="https://github.com/Vidosava98">
-            <img
-              src="/github.svg"
-              alt="Git"
-              className="h-[3.81rem] w:[3.81rem] m-4"
-            />
-          </a>
-          <a href="https://www.instagram.com/arsic.vida98/">
-            <img
-              src="/instagram.svg"
-              alt="Instagram"
-              className="h-[3.81rem] w:[3.81rem]  m-4"
-            />
-          </a>
-        </div>
-        <p className="mb-8">@2025, Vidosava Arsic.</p>
-      </footer>
     </div>
   );
 }

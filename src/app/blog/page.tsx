@@ -11,7 +11,7 @@ export default function Index() {
   const morePosts = allPosts.slice(1);
 
   return (
-    <main className="relative bg-black-100 flex justify-end items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
+    <main className="relative bg-black-100 flex justify-end items-center flex-col overflow-hidden mx-auto sm:px-10 px-5 text-white">
       <div className="max-w-7xl w-full">
         <Container>
           <Intro />

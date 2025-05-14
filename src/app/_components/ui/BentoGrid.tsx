@@ -96,10 +96,10 @@ export const BentoGridItem = ({
             "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
           )}
         >
-          <div className="font-sans font-extralight text-sm  text-[#c1c2d3] md:text-xs lg:text-base z-20">
+          <div className="font-sans font-extralight text-sm text-purple md:text-xs lg:text-base z-20">
             {description}
           </div>
-          <div className="mt-2 mb-2 font-sans font-bold text-neutral-600 dark:text-neutral-200 text-lg lg:text-3xl max-w-96 z-20">
+          <div className="mt-2 mb-2 font-sans font-bold text-purple dark:text-neutral-200 text-lg lg:text-3xl max-w-96 z-20">
             {title}
           </div>
           {/* {id == 2 && <GlobeDemo />} */}
@@ -116,6 +116,15 @@ export const BentoGridItem = ({
                 handleClick={handleCopy}
               />
             </div>
+          )}
+          {id === 2 && (
+            <a href="Resource/Vidosava Arsic CV.pdf">
+              <MagicButton
+                title="OPEN RESUME"
+                position="left"
+                otherClasses="!bg-[#161a31]"
+              />
+            </a>
           )}
         </div>
       </div>
