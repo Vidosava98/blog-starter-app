@@ -14,6 +14,7 @@ export function Hero() {
     <div className="relative z-10">
       <FloatingNav
         navItems={[
+          { name: "Blog", link: "/blog" },
           { name: "About Me", link: "#aboutMeId" },
           { name: "Technologies", link: "#techId" },
           { name: "Projects", link: "#projectsId" },

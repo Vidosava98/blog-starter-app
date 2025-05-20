@@ -7,7 +7,7 @@ type Props = {
 export default function Profile({ src, alt }: Props) {
   return (
     <motion.div
-      className="relative w-60 h-60 mx-auto rounded-full overflow-hidden shadow-lg my-8"
+      className="relative w-60 h-60 mx-auto rounded-full overflow-hidden shadow-lg mb-8 mt-32"
       whileHover={{ scale: 1.05 }}
       transition={{ duration: 0.3 }}
     >

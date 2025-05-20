@@ -34,7 +34,7 @@ export default function RootLayout({
       </head>
       <body className={cn("bg-black-100 text-purple")}>
         {/* <ThemeSwitcher /> */}
-        <Header />
+        {/* <Header /> */}
         <div className="min-h-screen">
           {/* <ThemeProvider>{children}</ThemeProvider>
           TODO: otkomentariši kada/ako budeš htela da se zezaš sa dark mode. Ignoriši dok ne popraviš build: :) */}

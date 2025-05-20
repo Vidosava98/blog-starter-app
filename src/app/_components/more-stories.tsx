@@ -7,7 +7,7 @@ type Props = {
 
 export function MoreStories({ posts }: Props) {
   return (
-    <section>
+    <section id="storiesId">
       <h2 className="mb-8 text-5xl md:text-7xl font-bold tracking-tighter leading-tight">
         More Stories
       </h2>

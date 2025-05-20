@@ -22,7 +22,7 @@ export const FloatingNav = ({
 }) => {
   const { scrollYProgress } = useScroll();
 
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     // Check if current is not undefined and is a number
@@ -35,7 +35,7 @@ export const FloatingNav = ({
         if (direction < 0) {
           setVisible(true);
         } else {
-          setVisible(false);
+          setVisible(true);
         }
       }
     }
@@ -49,14 +49,14 @@ export const FloatingNav = ({
           y: -100,
         }}
         animate={{
-          y: visible ? 0 : -100,
-          opacity: visible ? 1 : 0,
+          y: visible ? 0 : 0,
+          opacity: visible ? 1 : 1,
         }}
         transition={{
           duration: 0.2,
         }}
         className={cn(
-          "flex flex-wrap w-96 lg:w-2/5 fixed top-5 inset-x-0 mx-auto border-none rounded-full shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] px-4 pt-4 items-center justify-center space-x-4 bg-black-100 text-white font-bold",
+          "flex flex-wrap w-96 lg:w-full fixed top-0 inset-x-0 mx-auto border-none shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] px-8 items-center justify-center space-x-4 lg:space-x-8 bg-black-100 text-white font-bold",
           className
         )}
       >
@@ -65,11 +65,13 @@ export const FloatingNav = ({
             key={`link=${idx}`}
             href={navItem.link}
             className={cn(
-              "relative items-center flex space-x-1 hover:text-neutral-500 mb-4"
+              "relative items-center flex space-x-1 hover:text-neutral-500 m-4 lg:m-8"
             )}
           >
             <span className="block sm:hidden">{navItem.icon}</span>
-            <span className="text-sm !cursor-pointer">{navItem.name}</span>
+            <span className=" text-sm lg:text-lg !cursor-pointer">
+              {navItem.name}
+            </span>
           </a>
         ))}
       </motion.div>
