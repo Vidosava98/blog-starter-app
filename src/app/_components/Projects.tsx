@@ -3,6 +3,7 @@ import React from "react";
 import TitleParagraf from "./titleParagraf";
 import { projects } from "@/app/data/index";
 import { PinContainer } from "./ui/3d-pin";
+import Icon from "./ui/Icon";
 const Projects = () => {
   return (
     <div className="mt-20">
@@ -27,13 +28,14 @@ const Projects = () => {
                 <div className="flex items-center justify-between pt-7 mb-3">
                   <div className="flex flex-wrap items-center gap-2">
                     {iconLists.map((icon, index) => (
-                      <div
+                      <Icon
                         key={icon}
-                        className="border border-white/[0.2] rounded-full lg:w-12 lg:h-12 w-10 h-10 flex justify-center items-center overflow-hidden"
-                        // style={{ transform: `translateX(-${5 * index * 2}px)` }}
-                      >
-                        <img src={icon} alt={icon} className="" />
-                      </div>
+                        name={icon}
+                        styleIcon="border border-white/[0.2] rounded-full lg:w-12 lg:h-12 w-10 h-10 flex justify-center items-center overflow-hidden"
+                        iconImgSrc={icon}
+                        styleIconImg=""
+                        paragraf={false}
+                      />
                     ))}
                   </div>
                 </div>

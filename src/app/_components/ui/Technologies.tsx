@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import TitleParagraf from "../titleParagraf";
+import Icon from "./Icon";
 const Technologies = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const contentRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -107,17 +108,14 @@ const Technologies = () => {
               }`}
             >
               {group.map((tech, techIndex) => (
-                <div
+                <Icon
                   key={techIndex}
-                  className="flex flex-col text-center justify-center items-center gap-2 border-slate-200 p-4 rounded-2xl"
-                >
-                  <img
-                    src={tech.imgSrc}
-                    alt={tech.name}
-                    className="border border-white/[0.2] bg-white-200 rounded-full lg:w-12 lg:h-12 w-10 h-10 flex overflow-hidden"
-                  />
-                  <p className="mt-2.5 font-bold">{tech.name}</p>
-                </div>
+                  name={tech.name}
+                  styleIcon="flex flex-col text-center justify-center items-center gap-2 border-slate-200 p-4 rounded-2xl"
+                  iconImgSrc={tech.imgSrc}
+                  styleIconImg="border border-white/[0.2] bg-white-200 rounded-full lg:w-12 lg:h-12 w-10 h-10 flex overflow-hidden"
+                  paragraf={true}
+                />
               ))}
             </div>
           ))}
