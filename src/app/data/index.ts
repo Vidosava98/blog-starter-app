@@ -126,3 +126,51 @@ export const testimonials = [
     title: "Software Developer at Diligent Software",
   },
 ];
+
+export const techGroups = [
+  [
+    { name: "C#", imgSrc: "Resource/Images/Icons/Table/csharp.svg" },
+    {
+      name: "JavaScript",
+      imgSrc: "Resource/Images/Icons/Table/javascript.svg",
+    },
+    { name: "Python", imgSrc: "Resource/Images/Icons/Table/python.svg" },
+    { name: "C", imgSrc: "Resource/Images/Icons/Table/C.svg" },
+    { name: "Java", imgSrc: "Resource/Images/Icons/Table/java.svg" },
+  ],
+  [
+    { name: ".NET", imgSrc: "Resource/Images/Icons/Table/dotnet.svg" },
+    { name: "Node.js", imgSrc: "Resource/Images/Icons/Table/nodejs.svg" },
+  ],
+  [
+    { name: "React", imgSrc: "Resource/Images/Icons/Table/react.svg" },
+    { name: "HTML", imgSrc: "Resource/Images/Icons/Table/html.svg" },
+    { name: "CSS", imgSrc: "Resource/Images/Icons/Table/css3.svg" },
+  ],
+  [
+    { name: "SQL", imgSrc: "Resource/Images/Icons/Table/sql.svg" },
+    { name: "MongoDB", imgSrc: "Resource/Images/Icons/Table/mongodb.svg" },
+    { name: "TiDB", imgSrc: "Resource/Images/Icons/Table/tidb.svg" },
+    {
+      name: "Cassandra",
+      imgSrc: "Resource/Images/Icons/Table/cassandra.svg",
+    },
+    { name: "Neo4j", imgSrc: "Resource/Images/Icons/Table/neo4j.svg" },
+  ],
+  [
+    { name: "Docker", imgSrc: "Resource/Images/Icons/Table/docker.svg" },
+    { name: "Swagger", imgSrc: "Resource/Images/Icons/Table/swagger.svg" },
+    { name: "GitHub", imgSrc: "Resource/Images/Icons/Table/github.svg" },
+    {
+      name: "Bitbucket",
+      imgSrc: "Resource/Images/Icons/Table/bitbucket.svg",
+    },
+    {
+      name: "Mosquitto",
+      imgSrc: "Resource/Images/Icons/Table/mosquitto.svg",
+    },
+    { name: "Kafka", imgSrc: "Resource/Images/Icons/Table/Kafka.svg" },
+    { name: "Flink", imgSrc: "Resource/Images/Icons/Table/flink.svg" },
+    { name: "Figma", imgSrc: "Resource/Images/Icons/Table/figma.svg" },
+  ],
+];
