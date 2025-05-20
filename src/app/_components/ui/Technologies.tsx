@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import TitleParagraf from "../titleParagraf";
 const Technologies = () => {
-  const [activeIndex, setActiveIndex] = useState(2);
+  const [activeIndex, setActiveIndex] = useState(0);
   const contentRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const setRef = useCallback((el: HTMLDivElement | null, index: number) => {

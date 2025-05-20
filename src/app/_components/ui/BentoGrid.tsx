@@ -52,7 +52,7 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "relative group/bento shadow-input row-span-1 flex flex-col justify-between space-y-8 rounded-xl border border-neutral-200 bg-white transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none overflow-hidden",
+        "relative group/bento shadow-input flex flex-col justify-between rounded-xl border border-neutral-200 transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none overflow-hidden mx-4",
         className
       )}
       style={{
@@ -71,22 +71,18 @@ export const BentoGridItem = ({
               alt={img}
               className={cn(
                 imgClassName,
-                "object-cover object-center w-full h-full"
+                "object-cover object-center -full h-fullw"
               )}
             />
           )}
         </div>
 
-        <div
-          className={`absolute right-0 -bottom-5 ${
-            id === 5
-          } &&  'w-full opacity-80'`}
-        >
+        <div className={`absolute`}>
           {spareImg && (
             <img
               src={spareImg}
               alt={spareImg}
-              className={"object-cover, object-center w-full h-full"}
+              className={"object-cover, object-center w-full h-full opacity-50"}
             />
           )}
         </div>
@@ -96,13 +92,12 @@ export const BentoGridItem = ({
             "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
           )}
         >
-          <div className="font-sans font-extralight text-sm text-purple md:text-xs lg:text-base z-20">
+          <div className="font-sans font-bold text-lg text-white md:text-xs lg:text-base z-20">
             {description}
           </div>
-          <div className="mt-2 mb-2 font-sans font-bold text-purple dark:text-neutral-200 text-lg lg:text-3xl max-w-96 z-20">
+          <div className="mt-2 mb-2 font-sans font-bold text-white dark:text-neutral-200 text-lg lg:text-3xl max-w-96 z-20">
             {title}
           </div>
-          {/* {id == 2 && <GlobeDemo />} */}
           {id === 5 && (
             <div>
               <div className={`absolute -bottom-5 right-0 `}>
@@ -118,12 +113,8 @@ export const BentoGridItem = ({
             </div>
           )}
           {id === 2 && (
-            <a href="Resource/Vidosava Arsic CV.pdf">
-              <MagicButton
-                title="OPEN RESUME"
-                position="left"
-                otherClasses="!bg-[#161a31]"
-              />
+            <a href="Resource/Vidosava Arsic CV.pdf" className="m-auto">
+              <MagicButton title="OPEN RESUME" otherClasses="!bg-[#161a31]" />
             </a>
           )}
         </div>
