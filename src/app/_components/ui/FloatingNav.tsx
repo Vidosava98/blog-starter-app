@@ -56,7 +56,7 @@ export const FloatingNav = ({
           duration: 0.2,
         }}
         className={cn(
-          "flex flex-wrap w-96 lg:w-full fixed top-0 inset-x-0 mx-auto border-none shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] px-8 items-center justify-center space-x-4 lg:space-x-8 bg-black-100 text-white font-bold",
+          "flex flex-wrap w-96 lg:w-full fixed top-0 inset-x-0 mx-auto border-none shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] px-8 items-center justify-center bg-black-100 text-white font-bold",
           className
         )}
       >
@@ -65,11 +65,11 @@ export const FloatingNav = ({
             key={`link=${idx}`}
             href={navItem.link}
             className={cn(
-              "relative items-center flex space-x-1 hover:text-neutral-500 m-4 lg:m-8"
+              "relative items-center flex hover:text-neutral-500 m-2 lg:m-4"
             )}
           >
             <span className="block sm:hidden">{navItem.icon}</span>
-            <span className=" text-sm lg:text-lg !cursor-pointer">
+            <span className=" text-xl lg:text-xl !cursor-pointer">
               {navItem.name}
             </span>
           </a>

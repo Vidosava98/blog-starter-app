@@ -20,7 +20,7 @@ export function Hero() {
           { name: "Projects", link: "#projectsId" },
           { name: "Testimonials", link: "#testimonials" },
           { name: "Contact", link: "#footerId" },
-          { name: "Resume", link: "Resource/Vidosava Arsic CV.pdf" },
+          { name: "Resume", link: "/Vidosava Arsic CV.pdf" },
         ]}
       />
       <div id="content-1" className="flex justify-center text-center">

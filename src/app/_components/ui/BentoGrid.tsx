@@ -113,7 +113,7 @@ export const BentoGridItem = ({
             </div>
           )}
           {id === 2 && (
-            <a href="Resource/Vidosava Arsic CV.pdf" className="m-auto">
+            <a href="/Vidosava Arsic CV.pdf" className="m-auto">
               <MagicButton title="OPEN RESUME" otherClasses="!bg-[#161a31]" />
             </a>
           )}

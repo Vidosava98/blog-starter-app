@@ -32,7 +32,7 @@ export default function RootLayout({
           href="Resource/Images/Icons/website.svg"
         />
       </head>
-      <body className={cn("bg-black-100 text-purple")}>
+      <body className={cn("bg-black-100 text-white")}>
         {/* <ThemeSwitcher /> */}
         {/* <Header /> */}
         <div className="min-h-screen">

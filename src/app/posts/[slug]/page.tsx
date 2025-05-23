@@ -8,6 +8,7 @@ import Container from "@/app/_components/container";
 import Header from "@/app/_components/header";
 import { PostBody } from "@/app/_components/post-body";
 import { PostHeader } from "@/app/_components/post-header";
+import { FloatingNav } from "@/app/_components/ui/FloatingNav";
 
 export default async function Post(props: Params) {
   const params = await props.params;
@@ -18,13 +19,20 @@ export default async function Post(props: Params) {
   }
 
   const content = await markdownToHtml(post.content || "");
+  const navBar = [
+    { name: "All Blogs", link: "/blog" },
+    { name: "Portfolio", link: "/" },
+    { name: "Blog", link: "#blogId" },
+    { name: "Contact", link: "#footerId" },
+    { name: "Resume", link: "/Vidosava Arsic CV.pdf" },
+  ];
 
   return (
     <main>
       {/* <Alert preview={post.preview} /> */}
       <Container>
-        <Header />
-        <article className="mb-32 text-white">
+        <FloatingNav navItems={navBar} />
+        <article className="mb-32 pt-32 text-white">
           <PostHeader
             title={post.title}
             coverImage={post.coverImage}

@@ -18,8 +18,9 @@ export default function Index() {
           <FloatingNav
             navItems={[
               { name: "Portfolio", link: "/" },
-              { name: "Author", link: "#authorId" },
               { name: "Stories", link: "#storiesId" },
+              { name: "Contact", link: "#footerId" },
+              { name: "Resume", link: "/Vidosava Arsic CV.pdf" },
             ]}
           />
           <Intro />
