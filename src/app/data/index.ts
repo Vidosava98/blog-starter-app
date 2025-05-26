@@ -21,10 +21,10 @@ export const gridItems = [
   },
   {
     id: 3,
-    title: "My tech stack",
+    title: "my tech stack",
     description: "I constantly try to improve",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2 font-bold",
-    imgClassName: "",
+    imgClassName: "opacity-50",
     titleClassName: "justify-center",
     img: "/progress.jpg",
     spareImg: "",
@@ -115,9 +115,9 @@ export const projects = [
 export const testimonials = [
   {
     quote:
-      "Collaborating with Vida was an absolute pleasure. Her professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Vida's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Vida is the ideal partner.",
+      "Working with Vida in the 'Mentor the Young' program has been an absolute pleasure. She's a quick learner, a sharp thinker, and a genuinely capable developer. What stood out most was her openness to feedback and her eagerness to grow. She is very patient and diligent, always taking notes and making sure she fully understands each topic. Her dedication and focus allowed her to rapidly level up her skills and tackle challenges with confidence. Any team would be lucky to have her.",
     name: "Aleksandar Popovic",
-    title: "",
+    title: "Aleksandar Popović, Senior Frontend Developer",
   },
   {
     quote:

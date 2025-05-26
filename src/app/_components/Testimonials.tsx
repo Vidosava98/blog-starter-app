@@ -4,7 +4,7 @@ import TitleParagraf from "./titleParagraf";
 import { testimonials } from "../data";
 import { cn } from "@/lib/utils";
 function Testimonials() {
-  const pictures = ["./profile.svg", "Kaca.png"];
+  const pictures = ["./profil.jpg", "Kaca.png"];
   return (
     <div className="pb-20 mt-28 " id="testimonials">
       <TitleParagraf title="Testimonials" />

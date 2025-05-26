@@ -1,13 +1,13 @@
 ---
 title: "Are Reusable Components in React Really That Important?"
 excerpt: "This blog is mostly about my experience working on this project. It's not my first application, and it's definitely not the first one I’ve built while exploring new technologies. Over time, I’ve realized that the best way to learn isn’t by just reading theory or memorizing best practices — it's by building something. Try, fail, learn, and improve..."
-coverImage: "/assets/blog/preview/cover.jpg"
+coverImage: "/assets/blog/preview/blog-image2.png"
 date: "2025-05-21T00:05:00.322Z"
 author:
   name: Vidosava Arsic
   picture: "/assets/blog/authors/vida.jpg"
 ogImage:
-  url: "/assets/blog/preview/cover.jpg"
+  url: "/assets/blog/preview/blog-image.png"
 ---
 
 This blog is mostly about my experience working on this project. It's not my first application, and it's definitely not the first one I’ve built while exploring new technologies. Over time, I’ve realized that the best way to learn isn’t by just reading theory or memorizing best practices. It's by building something. Try, fail, learn, and improve. That’s how you become a real developer: by learning from your mistakes. This time was no different. I was learning **React**, **Next.js**, **Tailwind**, **Typescript**,and **Markdown**. I started with some legacy code. Actually, it was my first portfolio, which I had built a few months ago using JavaScript, HTML, CSS, some technologies I'm already familiar with. What I discovered during this process is that sometimes, it’s not more time that you need, it’s inspiration.
