@@ -81,7 +81,7 @@ export const projects = [
   {
     id: 3,
     title: "Home Party",
-    des: "Web application for users who want to organize a party and to see the party of other users.",
+    des: "Web application for users who want to organize a party and to see the party of other users. The idea was to create a web application using Node.js, Express.js and MongoDB.",
     img: "",
     iconLists: [
       "nodejs.svg",
@@ -96,7 +96,7 @@ export const projects = [
   {
     id: 4,
     title: "Graduation topic",
-    des: "Technologies for implementation of a real-time Data Warehouse. ",
+    des: "This project demonstrates an example of a Real-Time Data Warehouse (RTDW) using .NET to build applications, Apache Flink to manage data flow, and MongoDB and TiDB as databases.",
     img: "",
     iconLists: [
       "netcore.svg",
