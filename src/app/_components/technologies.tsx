@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState, useCallback } from "react";
-import TitleParagraf from "../titleParagraf";
-import Icon from "./Icon";
+import TitleParagraf from "./titleParagraf";
+import Icon from "./ui/Icon";
 import { techGroups } from "@/app/data/index";
 const Technologies = () => {
   const [activeIndex, setActiveIndex] = useState(0);

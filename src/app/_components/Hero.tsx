@@ -3,11 +3,10 @@ import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import MagicButton from "./ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa6";
 import Grid from "./grid";
-import TitleParagraf from "./titleParagraf";
 import Profile from "./profile";
-import Projects from "./Projects";
-import Testimonials from "./Testimonials";
-import Technologies from "./ui/Technologies";
+import Projects from "./projects";
+import Testimonials from "./testimonials";
+import Technologies from "./technologies";
 export function Hero() {
   return (
     <div className="relative z-10">
