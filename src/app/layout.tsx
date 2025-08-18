@@ -2,18 +2,17 @@ import Footer from "@/app/_components/footer";
 import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import cn from "classnames";
-//import { ThemeSwitcher } from "./_components/theme-switcher";
-import Header from "@/app/_components/header";
-import "@/app/globals.css";
-import ThemeProvider from "./_components/ThemeProvider";
-import { FloatingNav } from "./_components/ui/FloatingNav";
 
-//const inter = Inter({ subsets: ["latin"] });
+
+import "@/app/globals.css";
+import { NavBar } from "./_components/ui/NavBar";
+
+
 const navBar = [
   { name: "Home", link: "/" },
-  { name: "About Me", link: "/#aboutMeId", scroll: false },
-  { name: "Technologies", link: "/#techId", scroll: false },
-  { name: "Projects", link: "/#projectsId", scroll: false },
+  { name: "About Me", link: "/#aboutMeId"},
+  { name: "Technologies", link: "/#techId"},
+  { name: "Projects", link: "/#projectsId"},
   { name: "Blog", link: "/blog" },
   { name: "Contact", link: "#footerId" },
   { name: "Resume", link: "/Vidosava Arsic CV.pdf" },
@@ -42,12 +41,8 @@ export default function RootLayout({
         />
       </head>
       <body className={cn("bg-black-100 text-white")}>
-        {/* <ThemeSwitcher /> */}
-        {/* <Header /> */}
-        <FloatingNav navItems={navBar} />
+        <NavBar navItems={navBar} />
         <div className="min-h-screen">
-          {/* <ThemeProvider>{children}</ThemeProvider>
-          TODO: otkomentariši kada/ako budeš htela da se zezaš sa dark mode. Ignoriši dok ne popraviš build: :) */}
           {children}
         </div>
         <Footer />
