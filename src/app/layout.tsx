@@ -5,14 +5,14 @@ import cn from "classnames";
 
 
 import "@/app/globals.css";
-import { FloatingNav } from "./_components/ui/FloatingNav";
+import { NavBar } from "./_components/ui/NavBar";
 
 
 const navBar = [
   { name: "Home", link: "/" },
-  { name: "About Me", link: "/#aboutMeId", scroll: false },
-  { name: "Technologies", link: "/#techId", scroll: false },
-  { name: "Projects", link: "/#projectsId", scroll: false },
+  { name: "About Me", link: "/#aboutMeId"},
+  { name: "Technologies", link: "/#techId"},
+  { name: "Projects", link: "/#projectsId"},
   { name: "Blog", link: "/blog" },
   { name: "Contact", link: "#footerId" },
   { name: "Resume", link: "/Vidosava Arsic CV.pdf" },
@@ -41,7 +41,7 @@ export default function RootLayout({
         />
       </head>
       <body className={cn("bg-black-100 text-white")}>
-        <FloatingNav navItems={navBar} />
+        <NavBar navItems={navBar} />
         <div className="min-h-screen">
           {children}
         </div>
