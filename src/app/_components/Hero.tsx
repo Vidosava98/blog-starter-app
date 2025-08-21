@@ -4,7 +4,7 @@ import MagicButton from "./ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa6";
 import Grid from "./grid";
 import Profile from "./profile";
-import Projects from "./projects";
+import Projects from "./Projects";
 import Testimonials from "./Testimonials";
 import Technologies from "./Technologies";
 export function Hero() {
