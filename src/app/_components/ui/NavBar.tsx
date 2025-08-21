@@ -13,7 +13,7 @@ export const NavBar = ({
 }) => {
 
   return (
-   <div className="flex flex-row justify-center sticky top-0 z-50 bg-black">
+   <div className="flex flex-row justify-center sticky top-0 z-50 bg-black-200 flex-wrap font-bold">
         {navItems.map((navItem: any, idx: number) => (
           <a
             key={`link=${idx}`}
