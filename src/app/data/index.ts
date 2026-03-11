@@ -144,8 +144,10 @@ export const techGroups = [
   ],
   [
     { name: "React", imgSrc: "Resource/Images/Icons/Table/react.svg" },
+     { name: "React Native", imgSrc: "Resource/Images/Icons/Table/reactnative.svg" },
     { name: "HTML", imgSrc: "Resource/Images/Icons/Table/html.svg" },
     { name: "CSS", imgSrc: "Resource/Images/Icons/Table/css3.svg" },
+    {name: "Tailwind", imgSrc:"Resource/Images/Icons/Table/tailwind.svg"}
   ],
   [
     { name: "SQL", imgSrc: "Resource/Images/Icons/Table/sql.svg" },

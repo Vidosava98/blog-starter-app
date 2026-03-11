@@ -4,9 +4,20 @@ import TitleParagraf from "./titleParagraf";
 import Icon from "./ui/Icon";
 import { techGroups } from "@/app/data/index";
 const Technologies = () => {
+   useEffect(() => {
+  console.log("🔵 Komponenta je mount-ovana");
+  }, []);
+  useEffect(() => {
+    console.log("🟡 Komponenta je update-ovana");
+  });
+  useEffect(() => {
+  return () => {
+    console.log("🔴 Komponenta je unmount-ovana");
+  };
+  }, []);
   const [activeIndex, setActiveIndex] = useState(0);
   const contentRefs = useRef<(HTMLDivElement | null)[]>([]);
-
+ console.log(techGroups);
   const setRef = useCallback((el: HTMLDivElement | null, index: number) => {
     if (el) {
       contentRefs.current[index] = el;
