@@ -115,6 +115,18 @@ export const projects = [
 export const testimonials = [
   {
     quote:
+      "I worked with Vida as part of the same team on the development of a mobile app. As a frontend developer, she was reliable, responsive, and often came up with good ideas for improving the UI. She learns quickly and adjusts well to changes that happen during the development process. Vida is easy to work with, communicates well with the team, and approaches her work in a responsible and professional way.",
+    name: "Mila Mirovic",
+    title: "Certified Salesforce Developer & Front-end Engineer at Ncoded Solutions",
+  },
+    {
+    quote:
+      "I had the pleasure of working with Vida as a fellow frontend developer, and I can honestly say she is an outstanding coworker. She is highly skilled, pays attention to detail, and always does high-quality work. It's amazing how well she can turn challenging requirements into clear, well-organised, and easy-to-use interfaces.",
+    name: "Emilija Bicanic",
+    title: "Frontend Developer at Ncoded Solutions.",
+  },
+  {
+    quote:
       "Working with Vida in the 'Mentor the Young' program has been an absolute pleasure. She's a quick learner, a sharp thinker, and a genuinely capable developer. What stood out most was her openness to feedback and her eagerness to grow. She is very patient and diligent, always taking notes and making sure she fully understands each topic. Her dedication and focus allowed her to rapidly level up her skills and tackle challenges with confidence. Any team would be lucky to have her.",
     name: "Aleksandar Popovic",
     title: "Aleksandar Popović, Senior Frontend Developer",
@@ -124,7 +136,7 @@ export const testimonials = [
       "Working with Vida both at university and work has been a great experience. She’s always helpful, brings great team spirit, and creates a pleasant and motivating atmosphere.",
     name: "Katarina Lukic",
     title: "Software Developer at Diligent Software",
-  },
+  }
 ];
 
 export const techGroups = [

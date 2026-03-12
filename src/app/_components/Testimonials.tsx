@@ -4,7 +4,7 @@ import TitleParagraf from "./titleParagraf";
 import { testimonials } from "../data";
 import { cn } from "@/lib/utils";
 function Testimonials() {
-  const pictures = ["./profil.jpg", "Kaca.png"];
+  const pictures = ["./M.jfif","./Ema.png","./profil.jpg", "Kaca.png"];
   return (
     <div className="pb-20 mt-28 " id="testimonials">
       <TitleParagraf title="Testimonials" />
@@ -16,7 +16,7 @@ function Testimonials() {
         >
           <ul
             className={cn(
-              " flex  flex-col min-w-full shrink-0 gap-16 py-4 w-max flex-nowrap"
+              "flex  flex-col min-w-full shrink-0 gap-16 py-4 w-max flex-nowrap"
             )}
           >
             {testimonials.map((item, idx) => (
@@ -43,7 +43,7 @@ function Testimonials() {
                       <img
                         src={pictures[idx]}
                         alt="profile"
-                        className="rounded-full"
+                        className="rounded-full w-16 h-16"
                       />
                     </div>
                     <span className="flex flex-col gap-1">
